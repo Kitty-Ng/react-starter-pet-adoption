@@ -19,7 +19,6 @@ const useDropdown = (label, defaultState, options) => {
           <option key={a} value={a}>
             {a}
           </option>
-          // keys must be unique for each option
         ))}
       </select>
     </label>

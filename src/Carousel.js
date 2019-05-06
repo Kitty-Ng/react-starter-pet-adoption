@@ -7,7 +7,6 @@ class Carousel extends React.Component {
   };
 
   static getDerivedStateFromProps({ media }) {
-    // https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
     let photos = ['http://placecorgi.com/600/600'];
 
     if (media.length) {
@@ -20,8 +19,6 @@ class Carousel extends React.Component {
   handleIndexClick = event => {
     this.setState({
       active: +event.target.dataset.index
-      // dataset is a DOM api
-      // plus sign will turn it into a number
     });
   };
 
@@ -33,7 +30,6 @@ class Carousel extends React.Component {
         <img src={photos[active]} />
         <div className="carousel-smaller">
           {photos.map((photo, index) => (
-            // eslint-disable-next-line
             <img
               key={photo}
               onClick={this.handleIndexClick}
